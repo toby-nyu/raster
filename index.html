@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Raster Graphics Assignment</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-image: url('bg.png');
+                background-size: auto;
+                background-position: center;
+                background-repeat: no-repeat;
+                font-family: sans-serif;
+                color: white;
+                text-align: center;
+            }
+
+            /* add some outine around the heading to help it stand out from the background */
+            h1 {
+                text-shadow: 5px 2px 4px rgba(0, 0, 0, 0.7);
+                margin-top: 20px;
+                z-index: 1;
+            }   
+
+            img {
+                position:fixed;
+                bottom: -100px;
+                left:0;
+                max-width: 100%;
+                height: auto;
+                z-index: -1;
+            } 
+        </style>
+    </head>
+    <body>
+        <h1>This is a cutout image of me looking very serious</h1>
+  
+        <img 
+            src="me-480.png"
+            srcset="me-480.png 480w, me-960.png 960w, me-1440.png 1440w"
+            sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            alt="A cutout image of me looking very serious"
+        >
+    </body>
+</html>
